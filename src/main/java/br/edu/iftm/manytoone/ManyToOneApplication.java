@@ -1,17 +1,17 @@
-package iftm.edu.br.biblioteca;
+package br.edu.iftm.manytoone;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import iftm.edu.br.biblioteca.domain.Book;
-import iftm.edu.br.biblioteca.domain.Library;
-import iftm.edu.br.biblioteca.repository.BookRepository;
-import iftm.edu.br.biblioteca.repository.LibraryRepository;
+import br.edu.iftm.manytoone.domain.Book;
+import br.edu.iftm.manytoone.domain.Library;
+import br.edu.iftm.manytoone.repository.BookRepository;
+import br.edu.iftm.manytoone.repository.LibraryRepository;
 
 @SpringBootApplication
-public class BibliotecaApplication implements CommandLineRunner {
+public class ManyToOneApplication implements CommandLineRunner {
 	//indica injeção de dependencias
 	@Autowired
 	private BookRepository bookRepository;
@@ -20,7 +20,7 @@ public class BibliotecaApplication implements CommandLineRunner {
 	private LibraryRepository libraryRepository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(BibliotecaApplication.class, args);
+		SpringApplication.run(ManyToOneApplication.class, args);
 	}
 
 	@Override
